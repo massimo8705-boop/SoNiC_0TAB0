@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoNiC_0TAB0 — Tous vos navigateurs dans une seule fenêtre</title>
+<meta name="description" content="SoNiC_0TAB0 réunit Firefox, Chrome, Opera, Edge… en onglets dans une même fenêtre Windows, avec groupes colorés, côte à côte, sessions et une sortie Internet par onglet.">
+<link rel="icon" href="img/favicon.png">
+<style>
+  :root { --bg:#070a18; --card:#0f1530; --line:#232d5c; --txt:#e8ecff; --mut:#9aa3cc; --gold:#ffc857; --acc:#7c8cff; --ok:#4ecb71; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:16px/1.6 "Segoe UI",system-ui,sans-serif; }
+  a { color:#8fb4ff; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 20px; }
+  header.hero { position:relative; overflow:hidden; background:linear-gradient(180deg,rgba(7,10,24,.35),var(--bg)),url(img/fond.jpg) center/cover; border-bottom:1px solid var(--line); }
+  .hero .wrap { display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; padding-top:56px; padding-bottom:48px; }
+  .hero img.mascot { width:100%; max-width:420px; height:auto; justify-self:center; filter:drop-shadow(0 0 40px rgba(124,140,255,.55)); }
+  h1 { font-size:clamp(2rem,5vw,3.2rem); line-height:1.1; margin:0 0 12px; letter-spacing:.5px; }
+  h1 span { color:var(--gold); }
+  .lead { color:#cdd4ff; font-size:1.15rem; margin:0 0 24px; }
+  .btns { display:flex; flex-wrap:wrap; gap:12px; }
+  .btn { display:inline-block; padding:13px 22px; border-radius:10px; font-weight:700; text-decoration:none; border:1px solid var(--line); color:var(--txt); background:#1a2352; }
+  .btn.main { background:linear-gradient(135deg,#ffc857,#ff9f43); color:#1b1300; border:0; box-shadow:0 6px 26px rgba(255,200,87,.3); }
+  .btn:hover { filter:brightness(1.12); }
+  .small { color:var(--mut); font-size:.85rem; margin-top:10px; }
+  section { padding:44px 0 8px; }
+  h2 { font-size:1.6rem; margin:0 0 18px; } h2::after { content:""; display:block; width:56px; height:3px; background:var(--gold); margin-top:8px; border-radius:2px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; }
+  .card h3 { margin:0 0 6px; font-size:1.05rem; color:var(--gold); }
+  .card p { margin:0; color:#c3caf0; font-size:.95rem; }
+  ol.steps { counter-reset:s; list-style:none; padding:0; display:grid; gap:12px; }
+  ol.steps li { counter-increment:s; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px 14px 62px; position:relative; }
+  ol.steps li::before { content:counter(s); position:absolute; left:16px; top:50%; transform:translateY(-50%); width:32px; height:32px; border-radius:50%; background:var(--gold); color:#1b1300; font-weight:800; display:grid; place-items:center; }
+  code, kbd { background:#151c3e; border:1px solid var(--line); border-radius:5px; padding:1px 6px; font-size:.9em; }
+  .note { background:#241d0c; border:1px solid #5a4713; border-radius:12px; padding:14px 18px; color:#f0dfae; }
+  .hash { word-break:break-all; font:12px ui-monospace,Consolas,monospace; color:var(--mut); }
+  .twocol { display:grid; grid-template-columns:1fr 200px; gap:24px; align-items:center; }
+  .twocol img { width:100%; border-radius:16px; }
+  footer { margin-top:56px; padding:28px 0 40px; border-top:1px solid var(--line); color:var(--mut); font-size:.9rem; text-align:center; }
+  @media (max-width:760px) { .hero .wrap { grid-template-columns:1fr; text-align:center; } .btns { justify-content:center; } .twocol { grid-template-columns:1fr; } .twocol img { max-width:200px; margin:auto; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>SoNiC<span>_0TAB0</span></h1>
+      <p class="lead">Firefox, Chrome, Opera, Edge… dans <b>une seule fenêtre</b>, en onglets. Groupes colorés, affichage côte à côte, sessions, et une sortie Internet différente par onglet.</p>
+      <div class="btns">
+        <a class="btn main" href="SoNiC_0TAB0.zip" download>⬇ Télécharger pour Windows</a>
+        <a class="btn" href="SoNiC_0TAB0-Firefox.zip" download>🦊 Extension Firefox</a>
+      </div>
+      <p class="small">Windows 10 / 11 · gratuit · version 1.5 · ~4 Mo</p>
+    </div>
+    <img class="mascot" src="img/mascotte.png" alt="La mascotte féline cosmique à capuche, emblème MD doré">
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="fonctions">
+    <h2>Ce que ça fait</h2>
+    <div class="grid">
+      <div class="card"><h3>Onglets multi-navigateurs</h3><p>De vraies fenêtres de Firefox, Chrome, Opera, Edge, Brave… réunies dans une barre d'onglets unique.</p></div>
+      <div class="card"><h3>Groupes par glissement</h3><p>Glissez un onglet sur un autre pour les grouper ; couleur et nom personnalisables. Lâchez-le hors de la barre pour le détacher.</p></div>
+      <div class="card"><h3>Côte à côte</h3><p>Jusqu'à 4 onglets de navigateurs différents affichés en même temps : colonnes, lignes, grille 2 × 2 ou un grand + les autres.</p></div>
+      <div class="card"><h3>Sessions</h3><p>Sauvegarde automatique, restauration de la dernière session ou d'une session nommée.</p></div>
+      <div class="card"><h3>Une IP par onglet</h3><p>Chaque navigateur peut sortir par sa propre connexion (box, 4G du téléphone, VPN) avec détection des doublons et des fuites.</p></div>
+      <div class="card"><h3>Raccourcis</h3><p><kbd>Ctrl</kbd>+<kbd>1</kbd> … <kbd>9</kbd> pour changer d'onglet, <kbd>Ctrl</kbd>+<kbd>Tab</kbd>, et <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>G</kbd> pour capturer une fenêtre.</p></div>
+    </div>
+  </section>
+
+  <section id="install">
+    <h2>Installer en 3 étapes</h2>
+    <ol class="steps">
+      <li><b>Téléchargez</b> <code>SoNiC_0TAB0.zip</code>, puis clic droit → <b>Extraire tout…</b> (ne lancez rien depuis l'intérieur du zip).</li>
+      <li>Double-cliquez <code>INSTALLER.cmd</code>. Python est détecté et proposé à l'installation si besoin. Choisissez le démarrage avec Windows (normal ou administrateur).</li>
+      <li>Ouvrez <b>SoNiC_0TAB0</b>, cliquez <b>＋</b> pour capturer un navigateur ouvert ou en lancer un nouveau.</li>
+    </ol>
+    <p class="small">Sans installer : <code>SoNiC_0TAB0.cmd</code>. Windows SmartScreen peut afficher un avertissement : le programme n'est pas signé numériquement (« Informations complémentaires » → « Exécuter quand même »). Le code source est lisible dans le zip.</p>
+  </section>
+
+  <section id="ip">
+    <h2>Deux connexions, deux adresses IP</h2>
+    <div class="twocol">
+      <div>
+        <p>Une carte Wi-Fi ne rejoint qu'<b>un seul</b> réseau à la fois. Pour une seconde sortie Internet, il faut une <b>seconde carte</b> : branchez votre téléphone en <b>USB</b> et activez <i>Paramètres → Connexions → Point d'accès mobile et modem → Modem USB</i>. Dans SoNiC_0TAB0 : ☰ → Réseau → <b>Mes connexions Internet</b> → <i>Détecter</i> → <i>Créer les routes</i>.</p>
+        <p>Chaque route est une adresse locale du type <code>socks5://127.0.0.1:10810</code> à choisir dans la liste « proxy » d'un navigateur. L'extension Firefox permet la même chose par conteneur, <b>seule</b> ou avec l'application.</p>
+      </div>
+      <img src="img/chat.gif" alt="Le chat cosmique et son orbite magique">
+    </div>
+  </section>
+
+  <section id="ext">
+    <h2>L'extension Firefox</h2>
+    <p>Elle fonctionne <b>sans l'application</b>, en français et en anglais : routes SOCKS5/HTTP (avec identifiants), Tor, sessions restaurées avec conteneurs et routes, test d'IP par conteneur, alerte si deux conteneurs partagent la même IP, import/export. Si l'application est lancée, ses routes s'ajoutent automatiquement.</p>
+    <p class="small">Firefox n'installe durablement que des extensions signées : essai temporaire via <code>about:debugging</code> → « Ce Firefox » → « Charger un module complémentaire temporaire » (sélectionnez <code>manifest.json</code> du zip extrait), ou signature gratuite par Mozilla (voir <code>PUBLIER.md</code> dans le zip).</p>
+  </section>
+
+  <section id="limites">
+    <h2>À savoir</h2>
+    <div class="note">Fonctionne sur Windows uniquement. Certaines fenêtres refusent d'être intégrées (applications lancées en administrateur alors que SoNiC_0TAB0 ne l'est pas, ou fenêtres protégées) : un message précise la cause.</div>
+  </section>
+
+</main>
+<footer><div class="wrap">SoNiC_0TAB0 · <a href="https://github.com/massimo8705-boop/SoNiC_0TAB0">github.com/massimo8705-boop/SoNiC_0TAB0</a></div></footer>
+</body>
+</html>
