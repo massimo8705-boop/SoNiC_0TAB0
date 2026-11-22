@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="popup.css">
+<header>
+  <img src="../icons/icon-48.png" width="30" height="30" alt="">
+  <b class="brand">SoNiC<span>_0TAB0</span></b>
+  <select id="lang" title="Language / Langue"><option value="en">English</option><option value="fr">Français</option></select>
+</header>
+<div id="state" hidden></div>
+<details class="box">
+  <summary data-i18n="howto"></summary>
+  <ol>
+    <li data-i18n-html="how1"></li><li data-i18n-html="how2"></li>
+    <li data-i18n-html="how3"></li><li data-i18n-html="how4"></li>
+  </ol>
+  <div class="hint" data-i18n="hint_noroute"></div>
+</details>
+<div id="nocontainers" hidden data-i18n="no_containers"></div>
+<div class="bar"><button id="testall" data-i18n="test_all"></button><span id="summary"></span></div>
+<div id="list"></div>
+<details class="box" id="rlbox">
+  <summary data-i18n="rl_title"></summary>
+  <div class="hint" data-i18n="rl_hint"></div>
+  <div class="line"><button id="rlnow" data-i18n="rl_now"></button><button id="rlhard" data-i18n="rl_hard"></button><span id="rlmsg"></span></div>
+  <select id="rlsecs"></select>
+  <label class="chk"><input type="checkbox" id="rlsw"> <span data-i18n="rl_onswitch"></span></label>
+  <div class="hint" data-i18n="rl_warn"></div>
+</details>
+<details class="box" id="sessbox">
+  <summary data-i18n="sess_title"></summary>
+  <div class="hint" data-i18n="sess_hint"></div>
+  <div class="line"><button id="sprev" data-i18n="sess_prev"></button><span id="smsg"></span></div>
+  <div class="line"><input id="sname" data-i18n-ph="sess_name_ph"><button id="ssave" data-i18n="sess_save"></button></div>
+  <div id="slist"></div>
+</details>
+<details class="box" id="newbox">
+  <summary data-i18n="new_container"></summary>
+  <input id="newname" data-i18n-ph="new_name_ph">
+  <div id="newroute"></div>
+  <button id="create" data-i18n="create_open"></button>
+</details>
+<div class="foot"><a href="#" id="opts" data-i18n="settings"></a></div>
+<script src="../i18n.js"></script>
+<script src="../common.js"></script>
+<script src="popup.js"></script>

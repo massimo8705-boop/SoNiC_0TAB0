@@ -1,0 +1,80 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extName__",
+  "short_name": "SoNiC_0TAB0",
+  "version": "2.3",
+  "description": "__MSG_extDesc__",
+  "author": "sonicfr-jpg",
+  "homepage_url": "https://github.com/sonicfr-jpg/SoNiC",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "proxy",
+    "contextualIdentities",
+    "cookies",
+    "storage",
+    "tabs",
+    "contextMenus",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "i18n.js",
+      "common.js",
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "__MSG_actionTitle__",
+    "default_popup": "popup/popup.html",
+    "default_area": "navbar",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "sonic-0tab0@sonicfr-jpg.github.io",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "default_locale": "en",
+  "commands": {
+    "save-session": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "__MSG_cmdSave__"
+    },
+    "test-ip": {
+      "suggested_key": {
+        "default": "Alt+Shift+I"
+      },
+      "description": "__MSG_cmdTest__"
+    },
+    "reload-tab": {
+      "suggested_key": {
+        "default": "Alt+Shift+R"
+      },
+      "description": "__MSG_cmdReload__"
+    }
+  }
+}

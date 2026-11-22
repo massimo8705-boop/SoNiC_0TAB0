@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SoNiC_0TAB0</title>
+<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/icon-96.png">
+<style>
+  body { font: 14px "Segoe UI", sans-serif; background: #0a0e1f; color: #e8ecff; max-width: 760px; margin: 24px auto; padding: 0 16px; }
+  header { display: flex; align-items: center; gap: 12px; } header img { border-radius: 12px; } header h1 { flex: 1; margin: 0; }
+  h2 { margin-top: 28px; } input[type=text], select { padding: 5px; background: #141a33; color: #e8ecff; border: 1px solid #2a3566; border-radius: 4px; box-sizing: border-box; }
+  td { padding: 4px 8px 4px 0; } button { padding: 6px 14px; background: #23306b; color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+  button:hover { background: #31429a; } small, .muted { color: #8b93b8; } code { background: #141a33; padding: 1px 5px; border-radius: 3px; }
+  .bad { color: #ff6b6b; } .good { color: #4ecb71; } a { color: #8fb4ff; }
+</style>
+</head>
+<body>
+<header>
+  <img src="icons/icon-96.png" width="56" height="56" alt="">
+  <h1>SoNiC<span style="color:#ffc857">_0TAB0</span></h1>
+  <select id="lang"><option value="en">English</option><option value="fr">Français</option></select>
+</header>
+<p class="muted" data-i18n-html="intro"></p>
+
+<h2 data-i18n="h_routes"></h2>
+<table id="routes"></table>
+<p><button id="addroute" data-i18n="add_route"></button>
+   <select id="preset"></select> <span id="rmsg"></span></p>
+<p><small data-i18n-html="formats"></small></p>
+
+<h2 data-i18n="h_map"></h2>
+<table id="t"></table>
+<p><button id="save" data-i18n="save"></button> <span id="ok"></span></p>
+<p><small data-i18n-html="map_note"></small></p>
+
+<h2 data-i18n="h_sess"></h2>
+<p><label><input type="checkbox" id="autorestore"> <span data-i18n="auto_restore"></span></label><br><small id="sinfo"></small></p>
+
+<h2 data-i18n="h_reload"></h2>
+<p><label><input type="checkbox" id="reloadsw"> <span data-i18n="opt_switch"></span></label><br><small data-i18n="rl_warn"></small></p>
+
+<h2 data-i18n="h_backup"></h2>
+<p><button id="export" data-i18n="export"></button> <input type="file" id="import" accept=".json"> <span id="imsg"></span></p>
+<p><small data-i18n-html="export_note"></small></p>
+
+<h2 data-i18n="h_app"></h2>
+<p><label><input type="checkbox" id="detect"> <span data-i18n="detect"></span></label><br>
+<small data-i18n-html="detect_note"></small></p>
+<script src="i18n.js"></script>
+<script src="common.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
